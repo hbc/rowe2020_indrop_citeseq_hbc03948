@@ -18,7 +18,10 @@ module load bcl2fastq/2.18.0.12
 
 # Harvard Single Cell core script - no trimming of reads
 # we use bcl2fastq version 2.18.0.12
-bcl2fastq --use-bases-mask y*,y*,y*,y* \
+
+# bcl2fastq is non-standard, parameters provided in the trello card notes
+bcl2fastq --use-bases-mask y*,y*,l*,y* \
+--sample-sheet
 --mask-short-adapter-reads 0 \
 --minimum-trimmed-read-length 0 \
 --processing-threads 20
