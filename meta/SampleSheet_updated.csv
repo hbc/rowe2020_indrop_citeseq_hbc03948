@@ -1,0 +1,24 @@
+[Header],,
+IEMFileVersion,4,
+Date,,
+Workflow,GenerateFASTQ,
+Application,FASTQ Only,
+Assay,TruSeq HT,
+Description,3pM Spike PhiX,
+Chemistry,Amplicon,
+Experiment Name,GR7672,
+[Reads],,
+61,,
+14,,
+,,
+[Settings],,
+,,
+,,
+,,
+,,
+[Data],,
+Sample_ID,Sample_Name,index,index2
+GR1,GR1,TTACCTCC
+GR11,GR11,CAGTTATG
+GR2,GR2,CCTTTACT
+GR21,GR21,GAGACGGA
