@@ -10,7 +10,7 @@ import gzip
 # index = sample + cell = dict
 # dict elements {} ab = [list of UMIs]
 # cell
-#  
+#
 result_table = {}
 
 # open tags.csv
