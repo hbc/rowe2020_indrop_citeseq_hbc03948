@@ -19,10 +19,13 @@ module load bcl2fastq/2.18.0.12
 # Harvard Single Cell core script - no trimming of reads
 # we use bcl2fastq version 2.18.0.12
 
-bcl2fastq --use-bases-mask y*,y*,y*,y* \
+# different params - l*
+bcl2fastq --use-bases-mask y*,y*,l*,y* \
 --mask-short-adapter-reads 0 \
 --minimum-trimmed-read-length 0 \
---processing-threads 20
+--processing-threads 20 \
+--no-lane-splitting \
+--sample-sheet $1
 
 # Bauer core 
 # bcl2fastq \
