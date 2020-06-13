@@ -20,7 +20,7 @@ module load bcl2fastq/2.18.0.12
 # we use bcl2fastq version 2.18.0.12
 
 # different params - l*
-bcl2fastq --use-bases-mask y*,y*,l*,y* \
+bcl2fastq --use-bases-mask y*,y*,y*,y* \
 --mask-short-adapter-reads 0 \
 --minimum-trimmed-read-length 0 \
 --processing-threads 20 \
