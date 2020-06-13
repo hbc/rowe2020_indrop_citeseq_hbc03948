@@ -20,21 +20,3 @@ rowe_prefix=/n/data1/cores/bcbio/PIs/grant_rowe/rowe2020_indrop_citeseq_hbc03948
 umis fastqtransform \
 --separate_cb $umis_prefix/harvard-indrop-v3-transform.json $1 $2 $3 $4 | gzip > umitransformed.fq.gz
 
-umis demultiplex_samples \
---nedit 1 \
---barcodes sample_barcodes.csv \
---out_dir demultiplexed umitransformed.fq.gz
-
-cd demultiplexed
-for f in *.fq
-do
-    bname=`basename $f .fq`
-    echo $bname
-    umis cb_filter \
-    --bc1 $umis_prefix/harvard-indrop-v3-cb1.txt.gz \
-    --nedit 1 \
-    --bc2 $umis_prefix/harvard-indrop-v3-cb2.txt.gz $f | gzip -c > $bname.R2.fq.gz
-
-    $rowe_prefix/03_cite_seq.fake_read1.py $bname.R2.fq.gz | gzip > $bname.R1.fq.gz
-done
-cd ..
